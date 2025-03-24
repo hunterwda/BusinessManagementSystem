@@ -1,6 +1,6 @@
 
 using BusinessManagementSystem.Common.Attributes;
-using BusinessManagementSystem.Common.Cofing;
+using BusinessManagementSystem.Common.Log;
 using BusinessManagementSystem.Common.Sugar;
 
 namespace BusinessManagementSystem.Api
@@ -19,6 +19,7 @@ namespace BusinessManagementSystem.Api
             builder.Services.AddSwaggerGen();
             builder.Services.AddSqlSugarUnitSetupSetup();
             builder.Services.RegisterAssembly(["BusinessManagementSystem.Service"], typeof(IocRegisterAttribute));
+            builder.Services.AddLogSetup();
 
             var app = builder.Build();
 
