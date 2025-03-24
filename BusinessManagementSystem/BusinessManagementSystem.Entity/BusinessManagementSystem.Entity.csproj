@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Tool\BusinessManagementSystem.Common\BusinessManagementSystem.Common.csproj" />
-  </ItemGroup>
-
 </Project>

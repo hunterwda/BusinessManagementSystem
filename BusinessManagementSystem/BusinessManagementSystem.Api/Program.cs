@@ -1,4 +1,8 @@
 
+using BusinessManagementSystem.Common.Attributes;
+using BusinessManagementSystem.Common.Cofing;
+using BusinessManagementSystem.Common.Sugar;
+
 namespace BusinessManagementSystem.Api
 {
     public class Program
@@ -13,15 +17,13 @@ namespace BusinessManagementSystem.Api
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddSqlSugarUnitSetupSetup();
+            builder.Services.RegisterAssembly(["BusinessManagementSystem.Service"], typeof(IocRegisterAttribute));
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+            app.UseSwagger();
+            app.UseSwaggerUI();
 
             app.UseAuthorization();
 
