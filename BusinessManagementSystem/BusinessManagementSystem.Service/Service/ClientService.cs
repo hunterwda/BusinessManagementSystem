@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace BusinessManagementSystem.Service.Service
 {
+    [IocRegister]
     public class ClientService : IClientService
     {
         private readonly ILogger<ClientService> _logger;

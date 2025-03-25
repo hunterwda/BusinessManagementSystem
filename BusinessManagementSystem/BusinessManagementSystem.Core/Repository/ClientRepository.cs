@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessManagementSystem.Common.Attributes;
+using BusinessManagementSystem.Common.Sugar;
 using BusinessManagementSystem.Core.IRepository;
 using BusinessManagementSystem.Entity;
 
 namespace BusinessManagementSystem.Core.Repository
 {
+    [IocRegister]
     public class ClientRepository : IClientRepository
     {
         public readonly Repository<ClientManage> _clientRepository;

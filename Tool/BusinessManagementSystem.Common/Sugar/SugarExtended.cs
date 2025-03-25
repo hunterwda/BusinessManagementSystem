@@ -29,6 +29,7 @@ namespace BusinessManagementSystem.Common.Sugar
                     });
                 return Db;
             });
+            services.AddScoped(typeof(Repository<>));
         }
     }
 }
